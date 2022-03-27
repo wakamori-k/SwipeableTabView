@@ -35,7 +35,7 @@ public struct SwipeableTabTitle<SelectionValue: Hashable>: Identifiable {
     }
 }
 
-struct TitlesView<SelectionValue>: View where SelectionValue: Hashable {
+struct TitlesView<SelectionValue: Hashable>: View {
     @Binding var selection: SelectionValue
     var titles: [SwipeableTabTitle<SelectionValue>]
     @Namespace var namespace

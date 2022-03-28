@@ -26,8 +26,8 @@ public struct SwipeableTabView<SelectionValue: Hashable, Content: View>: View {
 // MARK: - Title
 public struct SwipeableTabTitle<SelectionValue: Hashable>: Identifiable {
     public var id: SelectionValue { tag }
-    public var tag: SelectionValue
-    public var text: String
+    public let tag: SelectionValue
+    public let text: String
     
     public init(tag: SelectionValue, text: String) {
         self.tag = tag

@@ -26,8 +26,8 @@ public struct SwipeableTabView<SelectionValue: Hashable, Content: View>: View {
 // MARK: - Title
 public struct SwipeableTabTitle<SelectionValue: Hashable>: Identifiable {
     public var id: SelectionValue { tag }
-    public var tag: SelectionValue
-    public var text: String
+    public let tag: SelectionValue
+    public let text: String
     
     public init(tag: SelectionValue, text: String) {
         self.tag = tag
@@ -80,7 +80,6 @@ struct TitleView<SelectionValue: Hashable>: View {
             Text(title.text)
                 .padding(.horizontal, 5)
                 .padding(.bottom, 3)
-                .font(.headline)
                 .foregroundColor(selection == title.id ? .black : .gray)
                 
             if selection == title.id {

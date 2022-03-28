@@ -16,8 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            SwipeableTabView(selection: $selection,
-                             titles: titles) {
+            SwipeableTabView(selection: $selection, titles: titles) {
                 ForEach(titles) { title in
                     VStack {
                         Text(title.text)
@@ -27,6 +26,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .font(.headline)
             .navigationTitle("SwipeableTabView")
         }
     }

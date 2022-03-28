@@ -80,7 +80,6 @@ struct TitleView<SelectionValue: Hashable>: View {
             Text(title.text)
                 .padding(.horizontal, 5)
                 .padding(.bottom, 3)
-                .font(.headline)
                 .foregroundColor(selection == title.id ? .black : .gray)
                 
             if selection == title.id {

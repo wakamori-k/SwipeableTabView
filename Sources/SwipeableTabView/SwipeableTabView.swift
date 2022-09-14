@@ -17,8 +17,10 @@ public struct SwipeableTabView<SelectionValue: Hashable, Content: View>: View {
         VStack {
             TitlesView(selection: $selection,
                        titles: titles)
-            ContentsView(selection: $selection,
-                         content: content)
+            if !content().isEmptyView {
+                ContentsView(selection: $selection,
+                             content: content)
+            }
         }
     }
 }
